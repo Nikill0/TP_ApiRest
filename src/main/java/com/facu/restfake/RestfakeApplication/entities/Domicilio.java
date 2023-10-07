@@ -19,7 +19,7 @@ public class Domicilio extends Base{
     @Column(name = "numero")
     public int numero;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_localidad")
     private Localidad localidad;
 }

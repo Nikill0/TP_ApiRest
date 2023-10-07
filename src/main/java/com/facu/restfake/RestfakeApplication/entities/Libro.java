@@ -25,6 +25,6 @@ public class Libro extends Base {
     @Column(name = "paginas")
     public int paginas;
 
-    @ManyToMany(cascade = CascadeType.REFRESH)
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Autor> autores;
 }
